@@ -8,7 +8,7 @@ function UserSearch() {
 
     const handleSearch = async () => {
         try {
-            const response = await axios.get(`http://localhost:3001/api/users/search?name=${searchTerm}`);
+            const response = await axios.get(`heliverse-user.vercel.app/api/users/search?name=${searchTerm}`);
             setSearchResults(response.data);
         } catch (error) {
             console.error('Error searching users:', error);
