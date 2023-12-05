@@ -12,7 +12,7 @@ function UserFilter() {
 
     const filter = async () => {
         try {
-            const response = await axios.get(`heliverse-user.vercel.app/api/users/filter?domain=${domain}&gender=${gender}&available=${available}`);
+            const response = await axios.get(`http://localhost:3001/api/users/filter?domain=${domain}&gender=${gender}&available=${available}`);
             setFilteredUsers(response.data);
             console.log(response.data);
 
