@@ -25,7 +25,7 @@ function UserList() {
 
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('heliverse-user.vercel.app/api/users');
+        const response = await axios.get('https://heliverse-user-api.vercel.app/api/users');
         setUsers(response.data);
 
       } catch (error) {

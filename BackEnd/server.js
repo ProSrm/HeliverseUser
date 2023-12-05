@@ -5,6 +5,7 @@ const db = require('./db');
 const usersRouter = require('./usersRoute');
 const cors = require('cors')
 
+
 app.use(cors());
 app.use('/api', usersRouter);
 app.use((req, res, next) => {
