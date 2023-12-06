@@ -5,7 +5,7 @@ const User = require('./usersModel');
 
 
 router.get('/', (req, res) => {
-    res.json("connected to main root route ");
+    res.send("<h3>working fine </h3>")
 })
 
 router.get('/users', async (req, res) => {
