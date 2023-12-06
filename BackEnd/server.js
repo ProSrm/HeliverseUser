@@ -24,6 +24,11 @@ db.once('open', () => {
     console.log('Connected to MongoDB database');
 });
 
+
+app.get('/', (req, res) => {
+    res.send("<h3>working fine </h3>")
+});
+
 const PORT = 3001;
 
 app.listen(PORT, () => {
