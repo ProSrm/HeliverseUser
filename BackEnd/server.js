@@ -8,12 +8,12 @@ const cors = require('cors')
 
 app.use(cors());
 app.use('/api', usersRouter);
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+// app.use((req, res, next) => {
+//     res.header("Access-Control-Allow-Origin", "*");
+//     res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// });
 
 mongoose.connect('mongodb+srv://srmate:srmate@clusterheliverse.hzzqago.mongodb.net/userheliverse?retryWrites=true&w=majority');
 
