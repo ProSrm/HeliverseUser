@@ -9,10 +9,14 @@ const User = require('./usersModel');
 // })
 
 router.get('/users', async (req, res) => {
+    const page = parseInt(req.query.page) || 1;
+    const limit = 20;
 
 
     try {
-        const users = await User.find();
+        const users = await User.find()
+        .limit(limit)
+        .skip((page - 1) * limit);
         res.json(users);
     } catch (error) {
         res.status(500).json({ message: error.message });
